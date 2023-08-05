@@ -9,6 +9,8 @@ Tabular Reinforcement Learning (RL) refers to a class of reinforcement learning 
 ### Environment: OpenAI Frozen Lake
 The "FrozenLake" environment is one of the classic environments provided by the OpenAI Gym toolkit. It is a grid-world environment in which an agent navigates on a frozen lake, trying to reach the goal while avoiding holes. The environment is often used as a benchmark for testing reinforcement learning algorithms. 
 
+![frozen_lake](https://github.com/Sagarnandeshwar/On_Policy_And_Off_Policy_Reinforcement_Learning/blob/main/images/frozen_lake.png)
+
 ### Algorithm
 
 #### SARSA
@@ -39,6 +41,8 @@ Here's a step-by-step explanation of the SARSA algorithm:
 
 The SARSA algorithm is an incremental learning algorithm, meaning it gradually updates the Q-values based on the agent's interactions with the environment. By continually exploring the environment and updating the Q-values using the observed experiences, the agent learns to improve its policy over time, ultimately converging to an optimal policy. 
 
+![SARSA](https://github.com/Sagarnandeshwar/On_Policy_And_Off_Policy_Reinforcement_Learning/blob/main/images/sarsa.png)
+
 #### Expected SARSA
 Expected SARSA is another reinforcement learning algorithm that is closely related to both SARSA and Q-learning. Like SARSA, it is an on-policy algorithm, meaning it learns the Q-values based on the current policy. The key difference between Expected SARSA and SARSA lies in how the next action is chosen during the value update step. 
 
@@ -57,6 +61,7 @@ In other words, rather than using the Q-value of the specific action taken in th
 
 The advantage of Expected SARSA over SARSA is that it can reduce variance in the learning process since it takes the expected value of the Q-function over all possible actions in the next state. This can lead to more stable learning and potentially better convergence in certain environments, especially when the policy is stochastic and exploration is an essential aspect of the learning process. 
 
+![eSARSA](https://github.com/Sagarnandeshwar/On_Policy_And_Off_Policy_Reinforcement_Learning/blob/main/images/esarsa.png)
  
 ## Function approximation 
 
@@ -67,6 +72,8 @@ In function approximation, the goal is to learn a function (e.g., a neural netwo
  
 ### Environment: OpenAI Frozen Lake Cart-Pole
 The "CartPole" environment is another classic reinforcement learning environment provided by the OpenAI Gym toolkit. It simulates a simple physics problem where an inverted pendulum (pole) is attached to a moving cart. The goal of the agent is to balance the pole on the cart by applying appropriate forces to the cart. 
+
+![cart_pole](https://github.com/Sagarnandeshwar/On_Policy_And_Off_Policy_Reinforcement_Learning/blob/main/images/cart_pole.png)
 
 ### Algorithm
 #### Q-learning
@@ -95,6 +102,8 @@ Here's a step-by-step explanation of the Q-learning algorithm:
 
 Q-learning iteratively updates the Q-values as the agent interacts with the environment, allowing it to learn an optimal Q-function. By following a suitable exploration strategy, Q-learning ensures a good balance between exploration and exploitation, enabling the agent to gradually improve its policy over time. 
 
+![ql](https://github.com/Sagarnandeshwar/On_Policy_And_Off_Policy_Reinforcement_Learning/blob/main/images/ql.png)
+
 #### Actor-Critic with linear function approximation
 Actor-Critic with linear function approximation is a reinforcement learning algorithm that combines the advantages of both policy-based methods (actor) and value-based methods (critic) while using a linear function approximation to represent the policy and value functions. This approach is useful in scenarios with large state and action spaces where tabular methods are infeasible. 
 
@@ -121,5 +130,7 @@ Here's how the Actor-Critic algorithm with linear function approximation works:
 5. **Repeat:** Continue steps 4 to 6 until the agent reaches a terminal state or a certain stopping criterion is met. 
 
 By combining policy-based and value-based methods, the Actor-Critic algorithm with linear function approximation can be more stable and efficient in learning optimal policies compared to using each method individually. It is commonly used in practical RL applications and serves as a foundation for more complex and powerful deep reinforcement learning algorithms. 
+
+![ac](https://github.com/Sagarnandeshwar/On_Policy_And_Off_Policy_Reinforcement_Learning/blob/main/images/ac.png)
 
  
